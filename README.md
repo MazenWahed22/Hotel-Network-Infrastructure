@@ -1,84 +1,75 @@
-# Hotel-Network-Infrastructure
-📘 README – Hotel Network Infrastructure Project
-🏨 Project Overview
+# 🏨 Hotel Network Infrastructure
 
-This project implements a complete network infrastructure for a hotel consisting of 3 floors. Each floor contains different departments, and each department is assigned its own VLAN to ensure proper segmentation and security.
+## 📘 Project Overview
 
-Floor 1 → Reception, Store, Logistics (3 VLANs)
+This project implements a **complete network infrastructure** for a hotel consisting of **3 floors**. Each floor contains different departments, and each department is assigned its own **VLAN** to ensure proper segmentation and security.
 
-Floor 2 → Finance, HR, Sales/Marketing (3 VLANs)
+* **Floor 1** → Reception, Store, Logistics *(3 VLANs)*
+* **Floor 2** → Finance, HR, Sales/Marketing *(3 VLANs)*
+* **Floor 3** → IT, Admin *(2 VLANs)*
 
-Floor 3 → IT, Admin (2 VLANs)
+Each floor includes:
 
-Each floor is equipped with:
+* 🖧 **Router** → Handles inter-VLAN routing, DHCP, and OSPF
+* 🔌 **Switch** → Provides VLAN segmentation
+* 📡 **Wireless Access Point** → Ensures Wi-Fi coverage
 
-A router (handling inter-VLAN routing, DHCP, and OSPF)
+The **3 routers** are interconnected via **serial DCE cables** and configured with **OSPF** for dynamic routing.
+🔐 **SSH** is enabled on all routers for secure remote access.
 
-A switch (for VLAN segmentation)
+---
 
-A wireless access point (for Wi-Fi coverage per floor)
+## 🛠️ Features & Configurations
 
-The 3 routers are interconnected using serial DCE cables and configured with OSPF for dynamic routing. SSH is enabled on all routers for secure remote access.
+### 🔹 VLANs
 
-🛠️ Features & Configurations
-🔹 VLANs
+* Dedicated VLAN for each department → improved security & reduced broadcast domains.
 
-Each department is assigned to a dedicated VLAN to separate broadcast domains and enhance security.
+### 🔹 DHCP
 
-🔹 DHCP
+* Configured on each router to assign IPs automatically per VLAN.
 
-Configured on each router to automatically assign IP addresses for devices in the respective VLANs.
+### 🔹 OSPF
 
-🔹 OSPF
+* Dynamic routing protocol interconnecting all routers under **Area 0**.
 
-Used as the routing protocol between the routers, allowing automatic route exchange and scalability.
+### 🔹 Wireless Networks
 
-🔹 Wireless Networks
+* Wi-Fi per floor, mapped to VLANs for seamless integration.
 
-Each floor has a wireless network connected to the floor’s switch, providing wireless access within the VLANs.
+### 🔹 SSH
 
-🔹 SSH
+* Secure remote access enabled with usernames and privilege levels.
 
-Secure remote login (SSH) enabled on all routers with usernames and privilege levels.
+---
 
-📐 Network Topology (Summary)
+## 📐 Network Topology (Summary)
 
-3 Routers → One per floor, interconnected via serial links.
+* **3 Routers** → One per floor, interconnected via serial links.
+* **3 Switches** → One per floor, managing VLANs.
+* **8 VLANs total** (3 + 3 + 2).
+* **Wireless Access Points** → One per floor.
+* **OSPF Area 0** → Backbone interconnection.
+* **DHCP Pools** per VLAN.
+* **SSH Remote Access** enabled.
 
-3 Switches → One per floor, managing VLANs for departments.
+---
 
-8 VLANs total (3 + 3 + 2).
+## 💡 Use Case / Why This Project Matters
 
-Wireless Access Points on each floor.
+This project simulates a **real-world enterprise network** for a hotel, but it can be adapted for other environments like large offices or campuses.
 
-OSPF Area 0 interconnecting all routers.
+* 🏨 **Hotels / Enterprises** → Department-based VLANs for performance & security.
+* 🔐 **Centralized Security** → VLANs + OSPF ensure isolated yet connected networks.
+* 📶 **Wi-Fi per Floor** → Stable wireless mapped to VLANs.
+* 🛠 **Scalability** → OSPF & DHCP make expansion simple.
+* 👨‍💻 **Remote Management** → Secure router management via SSH.
 
-DHCP Pools per VLAN.
+---
 
-SSH Remote Access configured on routers.
+## 🚀 Future Improvements
 
-💡 Use Case / Why This Project is Important
-
-This project simulates a real-world enterprise network for a hotel. It can be applied in scenarios such as:
-
-🏨 Hotels or Large Offices → Separate VLANs for departments (Finance, HR, IT, etc.) to improve security and performance.
-
-🔐 Centralized Security → VLANs + OSPF ensure isolated traffic while maintaining interconnectivity via routing.
-
-📶 Wi-Fi per Floor → Employees and guests have stable wireless access, mapped to proper VLANs.
-
-🛠 Scalability & Manageability → With OSPF and DHCP, the network is easy to expand and manage.
-
-👨‍💻 Remote Management → SSH allows administrators to securely manage routers from anywhere.
-
-This project can serve as a case study or training lab for network engineers preparing for CCNA/CCNP, or as a blueprint for real-life hotel/enterprise infrastructure design.
-
-🚀 Future Improvements
-
-Add a firewall (ASA or Zone-Based Firewall) for security policies between VLANs.
-
-Configure QoS to prioritize traffic (e.g., VoIP for Reception, Finance apps for accounting).
-
-Implement redundancy (HSRP/VRRP) for high availability.
-
-Extend network with WAN connection for Internet and VPN access.
+* 🔥 Add **Firewall (ASA / ZBF)** → Enforce inter-VLAN security policies.
+* 🎯 Configure **QoS** → Prioritize VoIP, accounting traffic, etc.
+* 🔄 Add **Redundancy (HSRP/VRRP)** → High availability.
+* 🌐 Extend to **WAN / VPN** → Internet access + secure remote connections.
