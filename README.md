@@ -73,3 +73,17 @@ This project simulates a **real-world enterprise network** for a hotel, but it c
 * 🎯 Configure **QoS** → Prioritize VoIP, accounting traffic, etc.
 * 🔄 Add **Redundancy (HSRP/VRRP)** → High availability.
 * 🌐 Extend to **WAN / VPN** → Internet access + secure remote connections.
+  
+---
+
+
+
+## 📜 Author
+**Mazen Wahed**  
+- 💼 [LinkedIn Profile](https://www.linkedin.com/in/mazen-wahed-260826320)  
+- 📧 mazenwahed538@gmail.com  
+
+
+
+
+
