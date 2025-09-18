@@ -47,7 +47,7 @@ The **3 routers** are interconnected via **serial DCE cables** and configured wi
 
 * **3 Routers** → One per floor, interconnected via serial links.
 * **3 Switches** → One per floor, managing VLANs.
-* **8 VLANs total** (3 + 3 + 2).
+* **5 VLANs total** .
 * **Wireless Access Points** → One per floor.
 * **OSPF Area 0** → Backbone interconnection.
 * **DHCP Pools** per VLAN.
