@@ -23,7 +23,7 @@ The **3 routers** are interconnected via **serial DCE cables** and configured wi
 
 ### 🔹 VLANs
 
-* Dedicated VLAN for each department → improved security & reduced broadcast domains.
+* Dedicated VLAN for each department.
 
 ### 🔹 DHCP
 
@@ -66,17 +66,6 @@ This project simulates a **real-world enterprise network** for a hotel, but it c
 * 👨‍💻 **Remote Management** → Secure router management via SSH.
 
 ---
-
-## 🚀 Future Improvements
-
-* 🔥 Add **Firewall (ASA / ZBF)** → Enforce inter-VLAN security policies.
-* 🎯 Configure **QoS** → Prioritize VoIP, accounting traffic, etc.
-* 🔄 Add **Redundancy (HSRP/VRRP)** → High availability.
-* 🌐 Extend to **WAN / VPN** → Internet access + secure remote connections.
-  
----
-
-
 
 ## 📜 Author
 **Mazen Wahed**  
